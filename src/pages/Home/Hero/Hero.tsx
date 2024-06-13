@@ -17,8 +17,8 @@ const Hero = () => {
       alignItems: 'center',
     }))
 
-    const StyledAvatar = styled('img')(() => ({
-      width: '100%',
+    const StyledAvatar = styled('img')(({theme}) => ({
+      width: '85%',
       borderRadius: '50%',
       border: `2px solid ${theme.palette.primary.contrastText}`,
     }))
