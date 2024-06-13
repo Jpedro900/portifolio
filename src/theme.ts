@@ -4,15 +4,23 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: "#1b3d85"
+      main: "#11314d"
     },
     secondary: {
-      main: "#e6e9f2"
+      main: "#FFEBA3"
     },
   },
   typography: {
-    fontFamily: 'Segoe UI'
-  }
+    fontFamily: [
+    "Rubik, sans-serif"
+    ].join(','),
+    h1: {
+      fontSize: "4.6rem",
+    },
+    h2: {
+      fontSize: "3.2rem",
+    },
+  },
 });
 
 theme = responsiveFontSizes(theme);
