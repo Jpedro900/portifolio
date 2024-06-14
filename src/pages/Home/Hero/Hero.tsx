@@ -1,12 +1,23 @@
-import { Box, Button, styled, Typography } from "@mui/material"
+import { Box, styled, Typography } from "@mui/material"
 import { Grid } from "@mui/material"
 import Container from "@mui/material/Container"
 import avatar from '../../../assets/images/foto-jp.png'
 import DownloadIcon from '@mui/icons-material/Download'
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../components/StyledButton/StyledButton"
-import theme from "../../../theme"
 import { AnimatedBackground } from "../../../components/AnymatedBackground/AnymatedBackground"
+import { ReactTyped } from "react-typed"
+
+const resume = "https://drive.usercontent.google.com/u/1/uc?id=1Mdv7XS_CIuIs8EytZY0-4nntmfvyvNh0&export=download"
+
+const DownloadResume = (url : string) => {
+    const link = document.createElement('a')
+    link.href = url
+    link.setAttribute('download', 'João Pedro Cavalcante - CV.pdf')
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+}
 
 const Hero = () => {
 
@@ -40,17 +51,27 @@ const Hero = () => {
               </Grid>
               <Grid item xs={12} md={8}> 
                 <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={1}>João Pedro Cavalcante</Typography>
-                <Typography color="primary.contrastText" variant="h2" textAlign="center">I'm a Front-End Developer</Typography>
+                <Typography color="primary.contrastText" variant="h2" textAlign="center">
+                  <ReactTyped
+                    strings={[
+                      "I'm a Front-End Developer"
+                    ]}
+                    typeSpeed={80}
+                  />
+                </Typography>
                 <Grid container display="flex" justifyContent="center" spacing={3} marginTop="15px">
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton onClick={() => console.log("Download")}>
-                      <Typography>Download CV</Typography>
+                    <StyledButton onClick={() => {
+                      
+                      DownloadResume(resume)
+                      }}>
+                      <Typography variant="h6">Download CV</Typography>
                       <DownloadIcon />
                     </StyledButton>
                   </Grid>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
                     <StyledButton onClick={() => console.log("Contact")} >
-                      <Typography>Contact Me</Typography>
+                      <Typography variant="h6">Contact Me</Typography>
                       <EmailIcon />
                     </StyledButton>
                   </Grid>
