@@ -56,11 +56,11 @@ const About = () => {
                 paddingBottom={3}
                 textAlign= "justify"
                 >
-                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Atualmente, sou estudante de Ciência da Computação na Universidade da Amazônia (UNAMA). Sou apaixonado por computadores desde que me entendo por gente e sempre fui muito dedicado aos estudos. Tenho um ano de experiência em programação front-end, embora ainda não tenha trabalhado formalmente na área. </Typography>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Currently, I am a Computer Science student at the University of the Amazon (UNAMA). My passion for computers has been evident for as long as I can remember, and I have always been very dedicated to my studies. With one year of experience in front-end programming, I have not yet formally worked in the field.</Typography>
                 <br/>
-                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Realizei dois estágios até o momento. No primeiro, na Casa Civil da Governadoria do Estado do Pará, desempenhei tarefas administrativas, como a elaboração de planilhas de orçamento, documentos em Word e a gestão dos fluxos de pagamento do órgão. No segundo estágio, na Compass UOL, participei de uma trilha de aprendizado em Cloud Data Engineering. Durante essa experiência, adquiri conhecimentos em análise de dados com Python, além de aprender a utilizar Git, GitHub, Docker e diversas ferramentas da AWS.</Typography>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>My professional journey includes two internships so far. The first was at the Civil House of the Government of the State of Pará, where I performed administrative tasks such as preparing budget spreadsheets, Word documents, and managing the payment flows of the department. The second internship, at Compass UOL, involved participating in a learning track in Cloud Data Engineering. During this period, I gained knowledge in data analysis with Python, and I also learned to use Git, GitHub, Docker, and various AWS tools.</Typography>
                 <br/>
-                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Sou uma pessoa muito dedicada e comprometida com meus objetivos. Sempre busco aprender coisas novas e me aperfeiçoar em tudo que faço. Além disso, sou muito comunicativo e gosto de trabalhar em equipe.</Typography>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Known for being a highly dedicated and committed individual, I constantly seek to learn new things and improve in everything I undertake. Additionally, I am very communicative and enjoy working in teams.</Typography>
             </Box>
           </Grid>
           <Grid item xs={12}>

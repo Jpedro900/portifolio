@@ -8,12 +8,12 @@ import StyledButton from "../../../components/StyledButton/StyledButton"
 import { AnimatedBackground } from "../../../components/AnymatedBackground/AnymatedBackground"
 import { ReactTyped } from "react-typed"
 
-const resume = "https://drive.usercontent.google.com/u/1/uc?id=1Mdv7XS_CIuIs8EytZY0-4nntmfvyvNh0&export=download"
+const resume = "https://drive.usercontent.google.com/u/0/uc?id=1Mdv7XS_CIuIs8EytZY0-4nntmfvyvNh0&export=download"
 
 const DownloadResume = (url : string) => {
     const link = document.createElement('a')
     link.href = url
-    link.setAttribute('download', 'João Pedro Cavalcante - CV.pdf')
+    link.setAttribute('download', 'CV.pdf')
     document.body.appendChild(link)
     link.click()
     link.remove()
