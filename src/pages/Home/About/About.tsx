@@ -7,7 +7,7 @@ const About = () => {
 
     return (
       <>
-        <Grid container p={4}>
+        <Grid container p={4} id="aboutSection">
           <Grid item xs={12}>
             <Typography variant="h1" color="secondary.contrastText" textAlign="center">About me</Typography>
           </Grid>
@@ -51,11 +51,16 @@ const About = () => {
           </Grid>
           <Grid item xs={12} display="flex" justifyContent="center">
             <Box
-                width={"80%"}
+                width={{ xs:"95%" , md:"80%" }}
                 borderBottom="2px solid #979797"
                 paddingBottom={3}
+                textAlign= "justify"
                 >
-                <Typography variant="body2" color="secondary.contrastText" textAlign="justify" lineHeight={1}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium cupiditate, optio vitae et exercitationem perspiciatis quidem iusto veniam aut, porro itaque illum aspernatur vero consectetur? Ducimus deserunt, reprehenderit dolores excepturi perferendis ex in quia, sit eius dolorem quam beatae similique distinctio. Libero, aspernatur. Necessitatibus dolorem delectus aliquam unde assumenda. Quasi est, rem dignissimos porro nemo harum architecto ut sit. Natus!</Typography>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Atualmente, sou estudante de Ciência da Computação na Universidade da Amazônia (UNAMA). Sou apaixonado por computadores desde que me entendo por gente e sempre fui muito dedicado aos estudos. Tenho um ano de experiência em programação front-end, embora ainda não tenha trabalhado formalmente na área. </Typography>
+                <br/>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Realizei dois estágios até o momento. No primeiro, na Casa Civil da Governadoria do Estado do Pará, desempenhei tarefas administrativas, como a elaboração de planilhas de orçamento, documentos em Word e a gestão dos fluxos de pagamento do órgão. No segundo estágio, na Compass UOL, participei de uma trilha de aprendizado em Cloud Data Engineering. Durante essa experiência, adquiri conhecimentos em análise de dados com Python, além de aprender a utilizar Git, GitHub, Docker e diversas ferramentas da AWS.</Typography>
+                <br/>
+                <Typography variant="body2" color="secondary.contrastText" lineHeight={1}>Sou uma pessoa muito dedicada e comprometida com meus objetivos. Sempre busco aprender coisas novas e me aperfeiçoar em tudo que faço. Além disso, sou muito comunicativo e gosto de trabalhar em equipe.</Typography>
             </Box>
           </Grid>
           <Grid item xs={12}>

@@ -15,7 +15,7 @@ const Projects = () => {
 
     return (
       <>
-        <StyledProjects>
+        <StyledProjects id='projectsSection'>
             <Typography variant="h1" color="primary.contrastText" textAlign="center" mb={4}>Projects</Typography> 
             <Grid container display="flex" justifyContent="center" gap={10} mb={4}>
               <Grid xs={12} md={5}>

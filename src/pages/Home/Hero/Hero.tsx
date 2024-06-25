@@ -70,7 +70,7 @@ const Hero = () => {
                     </StyledButton>
                   </Grid>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton onClick={() => console.log("Contact")} >
+                    <StyledButton onClick={() => document.getElementById('contactmeSection')?.scrollIntoView({ behavior:"smooth"})} >
                       <Typography variant="h6">Contact Me</Typography>
                       <EmailIcon />
                     </StyledButton>

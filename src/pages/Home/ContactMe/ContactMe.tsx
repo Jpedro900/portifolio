@@ -10,7 +10,7 @@ const ContactMe = () => {
 
     return (
       <>
-        <StyledContactMe>
+        <StyledContactMe id="contactmeSection">
             <Typography variant="h1" color="secondary.contrastText" textAlign="center" mb={4}>Contact Me</Typography>
             <Grid container height="80%" display="flex" justifyContent="center">
                 <FormEmail />
