@@ -1,10 +1,13 @@
 import { styled } from "@mui/material";
-
-
+import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 
 const StyledButton = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-    const StyledForm= styled('form')(({theme}) => ({
+    const StyledForm = styled('form')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -14,13 +17,15 @@ const StyledButton = () => {
         height: '100%',
         '& input': {
             width: '100%',
-            border : "none",
+            border: "none",
             borderBottom: "1px solid #dedede",
             padding: '10px',
         },
-        '& input[name="fmessage"]': {
+        '& textarea': {
+            width: '100%',
             height: '200px',
-
+            border: "1px solid #dedede",
+            padding: '10px',
         },
         '& input[type="submit"]': {
             width: '30%',
@@ -29,18 +34,52 @@ const StyledButton = () => {
             color: theme.palette.primary.contrastText,
             cursor: 'pointer',
         }
-    }))
+    }));
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const templateParams = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        emailjs.send('service_39p884r', 'template_9sn5sgu', templateParams, 'WA2ADPJk3SsFAlspk')
+        .then((response) => {
+            console.log("EMAIL SENT", response.status, response.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
 
     return (
         <>
-            <StyledForm>
-                    <input type="text" name="fname" placeholder="Name"/>
-                    <input type="email" name="femail" placeholder="Email"/>
-                    <input type="text" name="fmessage"/>
-                    <input type="submit" value="Submit" placeholder="Enviar"/>
+            <StyledForm onSubmit={handleSubmit}>
+                <input 
+                    type="text" 
+                    placeholder="Name" 
+                    onChange={(e) => setName(e.target.value)} 
+                    value={name}
+                />
+                <input 
+                    type="email" 
+                    placeholder="Email" 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    value={email}
+                />
+                <textarea 
+                    placeholder="Message" 
+                    onChange={(e) => setMessage(e.target.value)} 
+                    value={message}
+                />
+                <input 
+                    type="submit" 
+                    value="Submit" 
+                />
             </StyledForm>
         </>
     );
-}
+};
 
 export default StyledButton;

@@ -38,7 +38,7 @@ const Projects = () => {
                     <Typography variant="body2" color="primary.contrastText">Jul 2023 - Dez 2023</Typography>
                   </Grid>
                   <Grid container display="flex" justifyContent="center">
-                    <StyledProjectImage src="https://via.placeholder.com/150" alt="Project 1"/>
+                    <StyledProjectImage src="https://via.placeholder.com/250" alt="Project 1"/>
                     <Typography variant="body2" color="primary.contrastText" textAlign="justify" mt={3}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate ab earum adipisci perferendis deserunt? Quae beatae odit minus nostrum commodi. Cumque dolorem incidunt tempora, provident unde, qui vitae ipsa omnis dolore molestias delectus? Consectetur, voluptatibus.</Typography>
                     <Typography variant="body2" color="primary.contrastText" width="100%" textAlign="start" mt={3}>Tecnologies:</Typography>
                   </Grid>
