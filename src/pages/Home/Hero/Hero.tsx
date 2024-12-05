@@ -8,11 +8,12 @@
   import { AnimatedBackground } from "../../../components/AnymatedBackground/AnymatedBackground"
   import { ReactTyped } from "react-typed"
 
-  const resume = "portifolio/pdf/cv.pdf"
+  const resume = "https://drive.google.com/file/d/1A8SANtLTxvBXl7P_13IaN48tqR6eJ-Mo/view?usp=sharing"
 
   const DownloadResume = (url : string) => {
       const link = document.createElement('a')
       link.href = url
+      link.target = '_blank'
       link.setAttribute('download', 'CV - Joao Pedro Cavalcante de Souza.pdf')
       document.body.appendChild(link)
       link.click()
