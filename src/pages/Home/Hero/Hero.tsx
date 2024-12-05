@@ -8,7 +8,7 @@
   import { AnimatedBackground } from "../../../components/AnymatedBackground/AnymatedBackground"
   import { ReactTyped } from "react-typed"
 
-  const resume = "portifolio/pdf/CV.pdf"
+  const resume = "public/pdf/CV.pdf"
 
   const DownloadResume = (url : string) => {
       const link = document.createElement('a')
