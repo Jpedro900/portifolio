@@ -12,10 +12,10 @@ const SkillBox: React.FC<SkillBoxProps> = ({ children }) => {
         border: "1px solid #dedede",
         textAlign: "start",
         padding: '20px',
-        height: '1150px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
+        height: 'auto',
+        '@media (min-width: 1280px)': {
+            height: '1200px',
+        },
     }))
 
     return (

@@ -33,7 +33,7 @@ const Projects = () => {
                   <Grid container display="flex" flexDirection="column" mb={4}>
                     <Typography variant="body1" color="primary.contrastText">PillPal</Typography>
                     <Typography variant="body2" color="primary.contrastText">Mar 2024 - Jun 2024</Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}>Github: <StyledLink href="https://github.com/Jpedro900/PillPal" target="blank" >https://github.com/Jpedro900/PillPal</StyledLink></Typography>
+                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/PillPal" target="blank" >GitHub</StyledLink></Typography>
                   </Grid>
                   <Grid container display="flex" justifyContent="center">
                     <StyledProjectImage src={pillpal} alt="Project 1"/>
@@ -45,10 +45,10 @@ const Projects = () => {
               <Grid xs={12} md={5}>
                 <ProjectBox>
                   <Grid container display="flex" flexDirection="column" mb={4}>
-                    <Typography variant="body1" color="primary.contrastText">Project 1</Typography>
-                    <Typography variant="body2" color="primary.contrastText">Jul 2023 - Dez 2023</Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}>Github: <StyledLink href="https://github.com/Jpedro900/dessert-cart" target="blank" >https://github.com/Jpedro900/dessert-cart</StyledLink></Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}>Site: <StyledLink href="https://jpedro900.github.io/dessert-cart/" target="blank" >https://jpedro900.github.io/dessert-cart/</StyledLink></Typography>
+                    <Typography variant="body1" color="primary.contrastText">Dessert Cart</Typography>
+                    <Typography variant="body2" color="primary.contrastText">Dez 2024</Typography>
+                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/dessert-cart" target="blank" >GitHub</StyledLink></Typography>
+                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://jpedro900.github.io/dessert-cart/" target="blank" >Site</StyledLink></Typography>
                   </Grid>
                   <Grid container display="flex" justifyContent="center">
                     <StyledProjectImage src={dessertCart} alt="Project 1"/>
