@@ -1,7 +1,7 @@
 import { styled , Toolbar , MenuItem, Typography } from "@mui/material"
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer = () => {
 
@@ -26,13 +26,19 @@ const Footer = () => {
         <StyledFooter>
            <StyledToolBar>
                 <MenuItem>
-                    <GitHubIcon />
+                    <a href="https://github.com/Jpedro900" target="blank" style={{color: 'white'}}>
+                        <GitHubIcon fontSize="large"/>
+                    </a>
                 </MenuItem>
                 <MenuItem>
-                    <LinkedInIcon />
+                    <a href="https://www.linkedin.com/in/jpedrocsouza/" target="blank" style={{color: 'white'}}>
+                        <LinkedInIcon fontSize="large"/>
+                    </a>
                 </MenuItem>
                 <MenuItem>
-                    <EmailIcon />
+                    <a href="https://wa.me/5591992928285" target="blank" style={{color: 'white'}}>
+                        <WhatsAppIcon fontSize="large"/>
+                    </a>
                 </MenuItem>
             </StyledToolBar>
             <Typography variant="body2" color="primary.contrastText">© 2024 - João Pedro Cavalcante - All rights reserved</Typography>

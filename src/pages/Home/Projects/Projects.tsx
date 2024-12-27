@@ -8,6 +8,8 @@ const Projects = () => {
 
     const StyledProjectImage = styled('img')(() => ({
       width: '85%',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
     }))
 
     const StyledProjects= styled('div')(({theme}) => ({
@@ -47,10 +49,13 @@ const Projects = () => {
                   <Grid container display="flex" flexDirection="column" mb={4}>
                     <Typography variant="body1" color="primary.contrastText">Dessert Cart</Typography>
                     <Typography variant="body2" color="primary.contrastText">Dez 2024</Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/dessert-cart" target="blank" >GitHub</StyledLink></Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://jpedro900.github.io/dessert-cart/" target="blank" >Site</StyledLink></Typography>
+                    <Grid container display="flex" gap={2}>
+                      <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/dessert-cart" target="blank" >GitHub</StyledLink></Typography>
+                      <Typography variant="body2" color="primary.contrastText" mt={1}>|</Typography>
+                      <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://jpedro900.github.io/dessert-cart/" target="blank" >Site</StyledLink></Typography>
+                    </Grid>
                   </Grid>
-                  <Grid container display="flex" justifyContent="center">
+                  <Grid container display="flex" justifyContent="center" mt={8}>
                     <StyledProjectImage src={dessertCart} alt="Project 1"/>
                     <Typography variant="body2" color="primary.contrastText" textAlign="justify" mt={4}>I developed the Vite + React Project as an individual project, focusing on creating a dynamic and responsive front-end application. Using Vite as the bundler and React as the UI framework, I aimed to build an optimized and modern shopping cart system. The project also integrates Tailwind CSS for styling, ensuring a sleek and responsive design that adapts to various screen sizes.
                     In this project, I implemented a shopping cart system with features such as adding and removing items, adjusting quantities, and calculating the total price in real-time. Additionally, I configured Prettier with the prettier-plugin-tailwindcss plugin to ensure the consistent formatting of Tailwind classes.
