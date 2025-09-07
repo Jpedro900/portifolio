@@ -1,74 +1,73 @@
-import { Grid, Typography, styled } from "@mui/material"
-import ProjectBox from "../../../components/ProjectBox/ProjectBox"
+import React from "react";
+import styles from "./Projects.module.css";
+import { PROJECTS } from "../../../data/projects";
+import image from '../../../assets/images/smartcalc-cover.png'
 
-import pillpal from '../../../assets/images/pillPal.png'
-import dessertCart from '../../../assets/images/dessert-cart.png'
 
-const Projects = () => {
+const Projects: React.FC = () => {
+  const p = PROJECTS[0];
 
-    const StyledProjectImage = styled('img')(() => ({
-      width: '85%',
-      borderRadius: '10px',
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-    }))
+  return (
+    <section id="projects" className={styles.section}>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <h2 className={styles.title}>Projeto em destaque</h2>
+          <p className={styles.subtitle}>
+            Um case recente que reúne front-end moderno, UX e testes.
+          </p>
+        </header>
 
-    const StyledProjects= styled('div')(({theme}) => ({
-        backgroundColor: theme.palette.primary.main,
-        padding: '20px',
-    }))
+        <article className={styles.card} aria-labelledby="proj-title">
+          <div className={styles.mediaWrap}>  
+          <img
+            src={image}
+            alt={p.title}
+            className={styles.cover}
+            loading="lazy"
+          />
+          </div>
 
-    const StyledLink = styled('a')(({theme}) => ({
-      color: theme.palette.primary.contrastText,
-      textDecoration: 'subline',
-      '&:hover': {
-        color: theme.palette.secondary.main,
-      }
-    }))
+          <div className={styles.content}>
+            <h3 id="proj-title" className={styles.cardTitle}>
+              {p.title}
+            </h3>
+            <p className={styles.desc}>{p.description}</p>
 
-    return (
-      <>
-        <StyledProjects id='projectsSection'>
-            <Typography variant="h1" color="primary.contrastText" textAlign="center" mb={4}>Projects</Typography> 
-            <Grid container display="flex" justifyContent="center" gap={10} mb={4}>
-              <Grid xs={12} md={5}>
-                <ProjectBox>
-                  <Grid container display="flex" flexDirection="column" mb={4}>
-                    <Typography variant="body1" color="primary.contrastText">PillPal</Typography>
-                    <Typography variant="body2" color="primary.contrastText">Mar 2024 - Jun 2024</Typography>
-                    <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/PillPal" target="blank" >GitHub</StyledLink></Typography>
-                  </Grid>
-                  <Grid container display="flex" justifyContent="center">
-                    <StyledProjectImage src={pillpal} alt="Project 1"/>
-                    <Typography variant="body2" color="primary.contrastText" textAlign="justify" mt={4}>I developed, in collaboration with five colleagues, the mobile application PillPal as the final project for the Mobile Programming course in the 3rd semester of my Computer Science degree at UNAMA. PillPal is a practical solution designed to help users manage their medication schedule by setting personalized alerts, ensuring timely and accurate medication administration. This project gave me valuable experience in mobile app development, teamwork, and project management, enhancing my understanding of both technical and collaborative aspects of software development.</Typography>
-                    <Typography variant="body2" color="primary.contrastText" width="100%" textAlign="start" mt={3}>Technologies used: React Native, Tailwind CSS.</Typography>
-                  </Grid>
-                </ProjectBox>
-              </Grid>
-              <Grid xs={12} md={5}>
-                <ProjectBox>
-                  <Grid container display="flex" flexDirection="column" mb={4}>
-                    <Typography variant="body1" color="primary.contrastText">Dessert Cart</Typography>
-                    <Typography variant="body2" color="primary.contrastText">Dez 2024</Typography>
-                    <Grid container display="flex" gap={2}>
-                      <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://github.com/Jpedro900/dessert-cart" target="blank" >GitHub</StyledLink></Typography>
-                      <Typography variant="body2" color="primary.contrastText" mt={1}>|</Typography>
-                      <Typography variant="body2" color="primary.contrastText" mt={1}><StyledLink href="https://jpedro900.github.io/dessert-cart/" target="blank" >Site</StyledLink></Typography>
-                    </Grid>
-                  </Grid>
-                  <Grid container display="flex" justifyContent="center" mt={8}>
-                    <StyledProjectImage src={dessertCart} alt="Project 1"/>
-                    <Typography variant="body2" color="primary.contrastText" textAlign="justify" mt={4}>I developed the Vite + React Project as an individual project, focusing on creating a dynamic and responsive front-end application. Using Vite as the bundler and React as the UI framework, I aimed to build an optimized and modern shopping cart system. The project also integrates Tailwind CSS for styling, ensuring a sleek and responsive design that adapts to various screen sizes.
-                    In this project, I implemented a shopping cart system with features such as adding and removing items, adjusting quantities, and calculating the total price in real-time. Additionally, I configured Prettier with the prettier-plugin-tailwindcss plugin to ensure the consistent formatting of Tailwind classes.
-                    This project was a great learning experience for me in terms of front-end development, optimizing workflows with Vite, and using modern tools for building responsive web applications.</Typography>
-                    <Typography variant="body2" color="primary.contrastText" width="100%" textAlign="start" mt={3}>Technologies used: Vite, React, Tailwind CSS, Prettier</Typography>
-                  </Grid>
-                </ProjectBox>
-              </Grid>
-            </Grid>
-        </StyledProjects>
-      </>
-    )
-  }
-  
-  export default Projects
-  
+            <ul className={styles.techList} aria-label="Tecnologias">
+              {p.tech.map((t) => (
+                <li key={t} className={styles.techChip}>
+                  {t}
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.actions}>
+              {p.live && (
+                <a
+                  className={`${styles.btn} ${styles.btnPrimary}`}
+                  href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Abrir projeto
+                </a>
+              )}
+              {p.repo && (
+                <a
+                  className={`${styles.btn} ${styles.btnGhost}`}
+                  href={p.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Código no GitHub
+                </a>
+              )}
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

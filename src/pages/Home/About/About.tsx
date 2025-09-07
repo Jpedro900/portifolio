@@ -26,7 +26,7 @@ const About = () => {
                     >
                     <WorkspacePremiumIcon fontSize="large" />
                     <Typography variant="body1" color="secondary.contrastText" textAlign="center">Experience</Typography>
-                    <Typography variant="body2" color="secondary.contrastText" textAlign="center">1+ years</Typography>
+                    <Typography variant="body2" color="secondary.contrastText" textAlign="center">2+ years</Typography>
                     <Typography variant="body2" color="secondary.contrastText" textAlign="center">Front-end Developer</Typography>
                 </Box>  
             </Grid>
